@@ -5,7 +5,7 @@ import WindowManager from './components/WindowManager';
 
 function App() {
   const [theme, setTheme] = useState("dark");
-  const [background, setBackground] = useState("url('https://images.unsplash.com/photo-1497536003283-519132e25a7d');");
+  const [background, setBackground] = useState("url('https://images.unsplash.com/photo-1497536003283-519132e25a7d')");
 
   let themeMode = lightTheme;
   switch(theme){
