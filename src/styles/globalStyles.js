@@ -5,6 +5,7 @@ import { createGlobalStyle } from 'styled-components';
         width: 100%;
         position: absolute;
         bottom: 0;
+        background-color: #090a0c;
     }
     */
 export const GlobalStyles = createGlobalStyle`
@@ -62,6 +63,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({theme}) => theme.text};
     height: 0.7cm;
     border-radius: ${({theme}) => theme.borderRadius};
+    padding-left: 0.2%;
+    padding-right: 0.2%;
 }
 
 .menubarDropdown {
@@ -75,7 +78,6 @@ export const GlobalStyles = createGlobalStyle`
     width: 4cm;
     border-radius: ${({theme}) => theme.borderRadius};
     padding-right: 5px;
-    padding-left: 5px;
     font-size: 100%;
 }
 
@@ -83,12 +85,20 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     background: none;
 	border: none;
-	padding-right: 2px;
+    padding: 3%;
 	cursor: pointer;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    float: right;
     color: ${({theme}) => theme.text};
 }
 
+.menubarButton > img {
+    float: left;
+    width: 0.7cm;
+    padding-right: 3%;
+}
 .settingsPreviews {
     background-size: cover;
     border-radius: ${({theme}) => theme.borderRadius};
@@ -136,6 +146,19 @@ export const GlobalStyles = createGlobalStyle`
     width: 35%;
     margin-left: 5%;
     height: 0.8cm;
+}
+
+.openWindowList {
+    color: ${({theme}) => theme.text};
+    height: 0.7cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.openWindowList > img {
+    height: 0.6cm;
 }
 `;
 
