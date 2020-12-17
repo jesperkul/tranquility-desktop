@@ -6,6 +6,7 @@ import WindowManager from './components/WindowManager';
 function App() {
   const [theme, setTheme] = useState("dark");
   const [background, setBackground] = useState("url('https://images.unsplash.com/photo-1497536003283-519132e25a7d')");
+  const [scale, setScale] = useState(1);
 
   let themeMode = lightTheme;
   switch(theme){
@@ -24,8 +25,8 @@ function App() {
   return (
     <ThemeProvider theme={themeMode}>
       <div>
-        <GlobalStyles background={background} />
-        <WindowManager theme={theme} setTheme={setTheme} background={background} setBackground={setBackground}/>
+        <GlobalStyles background={background} scale={scale}/>
+        <WindowManager theme={theme} setTheme={setTheme} background={background} setBackground={setBackground} scale={scale} setScale={setScale}/>
       </div>
     </ThemeProvider>
   );

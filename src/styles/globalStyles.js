@@ -20,14 +20,18 @@ export const GlobalStyles = createGlobalStyle`
     }
     .titlebar, .titlebarUnfocused {
         width: 100%;
-        height: 0.7cm;
+        height: ${({scale}) => scale * 0.7}cm;
         color: ${({theme}) => theme.text};
         background: ${({theme}) => theme.titlebarBackground};
         text-align: ${({theme}) => theme.titlebarTextAlignment};
         user-select: none;
         transition: background 0.2s;
     }
+    .titlebar > button {
+        font-size: ${({scale}) => scale * 15}px;
+    }
     .titlebar > a, .titlebarUnfocused > a {
+        font-size: ${({scale}) => scale * 15}px;
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -37,6 +41,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .titlebarUnfocused > button {
+        font-size: ${({scale}) => scale * 16}px;
         color: ${({theme}) => theme.unfocusedText};
     }
 
@@ -56,6 +61,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .appWindow, .appContent {
+        min-height: ${({scale}) => scale * 0.7}cm;
+        min-width: ${({scale}) => scale * 4}cm;
         background-color: ${({theme}) => theme.background};
     }
 
@@ -63,13 +70,17 @@ export const GlobalStyles = createGlobalStyle`
         cursor: default;
     }
 
+    .appContent {
+        height: calc(100% - ${({scale}) => scale * 0.7}cm);
+      }
 
 
 .menubarLeft, .menubarRight {
     margin: 8px;
+    font-size: ${({scale}) => scale * 15}px;
     background-color: ${({theme}) => theme.background};
     color: ${({theme}) => theme.text};
-    height: 0.7cm;
+    height: ${({scale}) => scale * 0.7}cm;
     border-radius: ${({theme}) => theme.borderRadius};
     padding-left: 0.2%;
     padding-right: 0.2%;
@@ -83,10 +94,9 @@ export const GlobalStyles = createGlobalStyle`
 
 .menubarDropdown > * {
     background-color: ${({theme}) => theme.background};
-    width: 4cm;
+    width: ${({scale}) => scale * 4}cm;
     border-radius: ${({theme}) => theme.borderRadius};
     padding-right: 5px;
-    font-size: 100%;
 }
 
 .menubarButton {
@@ -99,12 +109,13 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     align-items: center;
     float: right;
+    font-size: ${({scale}) => scale * 15}px;
     color: ${({theme}) => theme.text};
 }
 
 .menubarButton > img {
     float: left;
-    width: 0.7cm;
+    width: ${({scale}) => scale * 0.7}cm;
     padding-right: 3%;
 }
 .settingsPreviews {
@@ -146,7 +157,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
 }
 
-.settings {
+.customization {
     padding: 3%;
 }
 
@@ -158,7 +169,7 @@ export const GlobalStyles = createGlobalStyle`
 
 .openWindowList {
     color: ${({theme}) => theme.text};
-    height: 0.7cm;
+    height: ${({scale}) => scale * 0.7}cm;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +177,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 .openWindowList > img {
-    height: 0.6cm;
+    height: ${({scale}) => scale * 0.6}cm;
 }
 `;
 
