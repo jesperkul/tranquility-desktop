@@ -5,7 +5,7 @@ import WindowManager from './components/WindowManager';
 
 function App() {
   const [background, setBackground] = useState("url('https://images.unsplash.com/photo-1497536003283-519132e25a7d')");  
-  const [customizeSettings, setCustomizeSettings] = useState({theme: "dark", scale: 1, connectedMenubar: false, bottomMenubar: false});
+  const [customizeSettings, setCustomizeSettings] = useState({theme: "dark", scale: 1, connectedMenubar: false, bottomMenubar: false, opacity: 1});
 
   let themeMode = lightTheme;
   switch(customizeSettings.theme){
