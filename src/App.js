@@ -10,7 +10,7 @@ import WindowManager from "./components/WindowManager";
 
 function App() {
   const [background, setBackground] = useState(
-    "url('https://images.unsplash.com/photo-1497536003283-519132e25a7d')"
+    "url(https://images.unsplash.com/photo-1497536003283-519132e25a7d)"
   );
   const [customizeSettings, setCustomizeSettings] = useState({
     theme: "dark",
@@ -28,8 +28,6 @@ function App() {
       break;
     case "classic":
       themeMode = classicTheme;
-      break;
-    case "platinum":
       break;
     default:
       break;
