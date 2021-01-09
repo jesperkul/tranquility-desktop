@@ -1,4 +1,5 @@
 import React, { SetStateAction, Dispatch } from "react";
+import defaultBackground3 from "../assets/img/backgrounds/edmond-lau-jba0W6Nssjg-unsplash.jpg";
 
 interface SettingsTypes {
   theme: string;
@@ -24,7 +25,7 @@ const DefaultSettings = {
   opacity: 1,
   font: "modern",
   usingLocalStorage: false,
-  background: "url(https://images.unsplash.com/photo-1497536003283-519132e25a7d)",
+  background: "url(" + defaultBackground3 + ")",
 };
 
 export const SettingsContext = React.createContext<SettingsContextProps>({
