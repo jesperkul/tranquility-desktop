@@ -59,7 +59,7 @@ const About = () => {
 
       <br />
       <a
-        href="https://github.com/jesperkul/retro-desktop-environment"
+        href="https://github.com/jesperkul/tranquility-desktop"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -81,7 +81,7 @@ const CreditsList = () => {
       <p>
         • {" "}
         <a
-          href="https://github.com/jesperkul/retro-desktop-environment"
+          href="https://github.com/jesperkul/tranquility-desktop"
           target="_blank"
           rel="noopener noreferrer"
         >
