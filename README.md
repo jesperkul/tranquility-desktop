@@ -8,4 +8,4 @@ It was previously using jQuery but has now been rewritten with React and TypeScr
 
 It doesn't need to be downloaded and runs in any modern web browser.
 
-Try it out: [Tranquility Desktop](https://jesperkul.github.io/tranquility-desktop/).
+Try it out: [Tranquility Desktop](https://tranquility-desktop.pages.dev/).
