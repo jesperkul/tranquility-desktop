@@ -94,7 +94,7 @@ export const AppContextProvider: React.FC<WindowListProviderProps> = ({
 		}
 	];
 
-	const [appListState, setAppListState] =
+	const [appListState /*, setAppListState */] =
 		React.useState<AppListTypes[]>(AppButtons);
 
 	return (
